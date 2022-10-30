@@ -2,10 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { getAllStudents, postStudents, deleteStudents, getStudentByID, updateStudent, getStudentsBySection, getStudentsByBranch } = require("../controllers/students");
 
-router.get("/",(req,res) => {
-    res.send(`Hello Shubham`);
-});
-
 router.get("/getAllStudents" , getAllStudents);
 
 router.post("/post", postStudents);

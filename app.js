@@ -9,6 +9,11 @@ const PORT = process.env.PORT || 2800;
 app.use(cors());
 app.use(express.json());
 app.use(bodyparser.urlencoded({extended : true}));
+
+app.get("/",(req,res) => {
+    res.send(`Hello Shubham`);
+});
+
 app.use(`/api`,router);
 
 app.listen(PORT, ()=> {
